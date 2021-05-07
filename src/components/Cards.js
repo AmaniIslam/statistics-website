@@ -2,7 +2,7 @@ import React, { useEffect, useState, Fragment } from "react";
 import "./Cards.css";
 //import CardItem from "./CardItem";
 import { Link } from "react-router-dom";
-import Tabletop from "tabletop";
+//import Tabletop from "tabletop";
 import Papa from "papaparse";
 
 function extract(src) {
