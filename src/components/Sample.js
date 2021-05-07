@@ -1,33 +1,38 @@
 import React, { Component } from "react";
-import * as Papa from "papaparse";
-import { render } from "react-dom";
+import Cards from "./Cards";
 
-function Sample() {
-  let SHEET_ID = "1KGfMxWw54q_tN-22SlaQpamz8jrrWj0K77Sash81WHU"; // Get this from the main sheet URL (not the copied Publish URL with '2PACX' in it).
-  let API_KEY = "AIzaSyAY2Aau_KglJjDxRsRpdua6kIDPH3Lcvkc";
+class DataParser extends Component {
+  constructor(props) {
+    super(props);
+    this.updateData = this.updateData.bind(this);
+  }
 
-  function fetchSheet({ spreadsheetId, sheetName, apiKey, complete }) {
-    let url = `https://sheets.googleapis.com/v4/spreadsheets/${spreadsheetId}/values/${sheetName}?key=${apiKey}`;
-    return fetch(url).then((response) =>
-      response.json().then((result) => {
-        let data = Papa.parse(Papa.unparse(result.values), { header: true });
-        complete(data);
-      })
+  componentWillMount() {
+    var Papa = require("papaparse/papaparse.min.js");
+    Papa.parse(
+      "https://docs.google.com/spreadsheets/d/e/2PACX-1vSzZ9NDEJ33DuXd09ihvoM1z7gDoOf7PLY2oK7Em9Ev6zIjCXn9KDTgb_W-K0XsqcVb5BqB3mNBehID/pub?output=csv",
+      {
+        header: true,
+        download: true,
+        complete: this.updateData,
+      }
     );
   }
 
-  function init() {
-    fetchSheet({
-      spreadsheetId: "1KGfMxWw54q_tN-22SlaQpamz8jrrWj0K77Sash81WHU",
-      sheetName: "Sheet1",
-      apiKey: "AIzaSyAY2Aau_KglJjDxRsRpdua6kIDPH3Lcvkc",
-      complete: function (data) {
-        console.log(data);
-      },
-    });
+  updateData(result) {
+    const data = result.data;
+    console.log(data[0].name);
+
+    this.setState({ data: data });
   }
 
-  return <>{init()}</>;
+  render() {
+    return (
+      <div>
+        <Cards sample={this.data} />
+      </div>
+    );
+  }
 }
 
-export default Sample;
+export default DataParser;

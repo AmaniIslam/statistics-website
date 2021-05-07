@@ -27,7 +27,7 @@ function Home() {
         </Link>
       </h1>
       <Tapp />
-      <Cards />
+      <Sample />
       <Footer />
     </>
   );

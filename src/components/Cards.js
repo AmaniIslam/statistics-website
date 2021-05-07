@@ -1,6 +1,5 @@
 import React, { useEffect, useState, Fragment } from "react";
 import "./Cards.css";
-//import CardItem from "./CardItem";
 import { Link } from "react-router-dom";
 //import Tabletop from "tabletop";
 import Papa from "papaparse";
@@ -10,11 +9,35 @@ function extract(src) {
   return "https://www.youtube.com/embed/" + final;
 }
 
-function Cards() {
-  const Papa = require("papaparse");
+function Cards(props) {
+  //  const Papa = require("papaparse");
+  console.log(props);
   const fetch = require("node-fetch");
-  const [data, setData] = useState([]);
 
+  //  const [data, setData] = useState([]);
+  /*
+  function componentWillMount() {
+    // Your parse code, but not seperated in a function
+    var Papa = require("papaparse");
+    Papa.parse(
+      "https://docs.google.com/spreadsheets/d/e/2PACX-1vSzZ9NDEJ33DuXd09ihvoM1z7gDoOf7PLY2oK7Em9Ev6zIjCXn9KDTgb_W-K0XsqcVb5BqB3mNBehID/pub?output=csv",
+      {
+        header: true,
+        download: true,
+        skipEmptyLines: true,
+        // Here this is also available. So we can call our custom class method
+        complete: this.getData,
+      }
+    );
+  }
+
+  function getData(result) {
+    console.log(result); // displays whole data
+    this.setState({data: result}); // but gets error here
+  }.bind(this)
+
+  componentWillMount();
+  /*
   async function fetchSheet({ spreadsheetId, sheetName, apiKey, complete }) {
     let url = `https://sheets.googleapis.com/v4/spreadsheets/${spreadsheetId}/values/${sheetName}?key=${apiKey}`;
     return await fetch(url).then((response) =>
@@ -46,7 +69,7 @@ function Cards() {
     );
   }, []);
   console.log(data);
-  /*
+  
   function parseData() {
     Papa.parse(
       "https://docs.google.com/spreadsheets/d/e/2PACX-1vSzZ9NDEJ33DuXd09ihvoM1z7gDoOf7PLY2oK7Em9Ev6zIjCXn9KDTgb_W-K0XsqcVb5BqB3mNBehID/pub?output=csv",
@@ -59,9 +82,7 @@ function Cards() {
       }
     );
   }
-
   parseData();
-
   /*const [data, setData] = useState([]);
 
   useEffect(() => {
@@ -86,7 +107,7 @@ function Cards() {
           className="vid"
           width="385"
           height="225"
-          //src={extract(data[0].name)}
+          //src={extract(props.sample[0].name)}
           src={extract("https://www.youtube.com/watch?v=uRAp00SxP30")}
           title="YouTube video player"
           frameborder="0"
