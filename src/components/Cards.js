@@ -86,8 +86,8 @@ function Cards() {
           className="vid"
           width="385"
           height="225"
-          src={extract(data[0].name)}
-          //  src={extract("https://www.youtube.com/watch?v=uRAp00SxP30")}
+          //src={extract(data[0].name)}
+          src={extract("https://www.youtube.com/watch?v=uRAp00SxP30")}
           title="YouTube video player"
           frameborder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
