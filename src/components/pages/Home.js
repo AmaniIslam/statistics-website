@@ -12,7 +12,7 @@ import Sample from "../Sample";
 function Home() {
   return (
     <>
-      <HeroSection /> <br />
+      <HeroSection />
       <h1>
         {" "}
         <Link to="/league-schedules" className="h-link">

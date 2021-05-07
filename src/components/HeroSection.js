@@ -16,7 +16,7 @@ function HeroSection() {
         >
           PLAYER
           <br />
-          LEADERBOARDS
+          HIGHLIGHTS
         </Button>
         <Button
           className="btns"
@@ -24,7 +24,7 @@ function HeroSection() {
           buttonSize="btn--large"
           path="/statistics"
         >
-          TEAM
+          STATS
           <br />
           LEADERBOARDS
         </Button>

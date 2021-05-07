@@ -1,24 +1,28 @@
 .hero-container {
   /* background: url('/images/img-home.jpg') center center/cover no-repeat; */
-  height: 100vh;
+  height: 85vh;
   width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  box-shadow: inset 0 0 0 1000px rgb(0, 0, 0);
+  box-shadow: inset 0 0 0 1000px white;
   object-fit: contain;
 }
 
 .hero-container > h1 {
-  color: rgb(147, 5, 29, 255);
+  text-align: center;
+  color: white;
   font-size: 100px;
-  margin-top: -100px;
+  margin-top: 5px;
+  border: 7px solid black;
+  border-radius: 8px;
+  background-image: radial-gradient(red, black);
+  width: 900px;
 }
 
 .hero-container > p {
   margin-top: 8px;
-  color: rgb(0, 0, 0);
   font-size: 32px;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
