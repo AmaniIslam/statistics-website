@@ -1,12 +1,12 @@
 import React from "react";
 import "../../App.css";
-import Cards from "../Cards";
 import HeroSection from "../HeroSection";
 import Footer from "../Footer";
 import Sapp from "../Sapp";
 import Tapp from "../Tapp";
 import "./Stats.css";
 import { Link } from "react-router-dom";
+import Sheets from "../Sheets";
 import Sample from "../Sample";
 
 function Home() {
@@ -27,7 +27,7 @@ function Home() {
         </Link>
       </h1>
       <Tapp />
-      <Sample />
+      <Sheets />
       <Footer />
     </>
   );
