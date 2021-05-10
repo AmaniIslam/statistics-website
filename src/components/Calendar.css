@@ -3,6 +3,7 @@
   height: 600;
   width: 800;
   padding-bottom: 50%;
+  z-index: 0;
 }
 
 .googleCalendar iframe {

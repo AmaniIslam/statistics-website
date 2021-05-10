@@ -2,13 +2,13 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 import Table from "./Table";
-import "./Stats.css";
+import "./Tapp.css";
 
 class Tapp extends React.Component {
   render() {
     return (
       <div class="googleSheets">
-        <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vT_q-sqbf5XdxoCgUWZu250zdiD5eoN50risxUCGzdAHLQg3NM4iwLdmxf4X7zckEDG1-brO3D7vXaz/pubhtml?widget=true&amp;headers=false&chrome=false"></iframe>{" "}
+        <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRYQAQCyJqScGjsDO_vF_1pmhb_KrIROuMozo1ZhVz38reHZDl6m5-tVRgDCAft_ZAF54Wahl4BZO8m/pubhtml?widget=true&amp;headers=false&chrome=false"></iframe>{" "}
       </div>
     );
   }

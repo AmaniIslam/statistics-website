@@ -8,8 +8,6 @@ function extract(src) {
 }
 
 function Cards(props) {
-  console.log(props[0]);
-
   return (
     <div className="cards">
       <h1>
