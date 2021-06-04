@@ -1,8 +1,6 @@
 import React from "react";
-import { Link } from "react-router-dom";
 
-import Table from "./Table";
-import "./Tapp.css";
+import "./Stats.css";
 
 class Tapp extends React.Component {
   render() {

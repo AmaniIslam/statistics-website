@@ -1,13 +1,10 @@
 import React from "react";
 import "../../App.css";
 import HeroSection from "../HeroSection";
-import Footer from "../Footer";
 import Sapp from "../Sapp";
 import Tapp from "../Tapp";
-import "./Stats.css";
 import { Link } from "react-router-dom";
 import Sheets from "../Sheets";
-import Sample from "../Sample";
 
 function Home() {
   return (
@@ -28,7 +25,6 @@ function Home() {
       </h1>
       <Tapp />
       <Sheets />
-      <Footer />
     </>
   );
 }
